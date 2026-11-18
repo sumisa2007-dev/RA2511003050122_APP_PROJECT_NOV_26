@@ -1,0 +1,13 @@
+21CSC203P Advanced Programming Practice
+
+TEAM DETAILS
+
+SUMEDHA RA2511003050122 BTECH CSE C 2ND YEAR
+
+SANJANA RA2511003050125 BTECH CSE C 2ND YEAR
+
+MENTOR DETAILS
+
+Dr. D. DEENA ROSE
+
+(Assistant Professor, Department of Computer Science and Engineering)0
