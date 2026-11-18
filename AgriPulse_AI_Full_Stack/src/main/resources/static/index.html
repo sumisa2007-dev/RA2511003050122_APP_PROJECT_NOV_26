@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriPulse AI | Irrigation Assistant</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">A</span><span>AgriPulse <b>AI</b></span></a><nav><a href="#predict">Predict</a><a href="#workflow">How it works</a><a href="#history">History</a></nav></header>
+<main>
+  <section class="hero"><div><p class="eyebrow">SMART AGRICULTURE SUPPORT</p><h1>Make every drop<br><span>count.</span></h1><p class="hero-text">Explore an irrigation recommendation using crop, soil and weather information.</p><a class="primary-link" href="#predict">Check irrigation need <span>→</span></a></div>
+    <div class="hero-panel"><div class="panel-top"><span>FIELD MONITOR</span><span>DEMO</span></div><div class="water-icon">◌</div><h2>Water-aware decisions</h2><p>Combine field observations to support more informed irrigation planning.</p><div class="mini-stats"><div><b>05</b><small>Input factors</small></div><div><b>01</b><small>Recommendation</small></div></div></div>
+  </section>
+  <section class="section" id="predict"><div class="section-heading"><p class="eyebrow">IRRIGATION ANALYSIS</p><h2>Enter field conditions</h2><p>Provide the latest available readings for your field.</p></div>
+    <div class="content-grid"><form id="predictionForm" class="form-card">
+      <label>Crop type<select id="cropType" required><option value="">Select crop</option><option>Rice</option><option>Wheat</option><option>Maize</option><option>Sugarcane</option><option>Cotton</option><option>Groundnut</option><option>Vegetables</option><option>Other</option></select></label>
+      <div class="field-grid"><label>Soil moisture (%)<input id="soilMoisture" type="number" min="0" max="100" step="0.1" placeholder="e.g. 25" required></label><label>Temperature (°C)<input id="temperature" type="number" min="-10" max="60" step="0.1" placeholder="e.g. 32" required></label><label>Humidity (%)<input id="humidity" type="number" min="0" max="100" step="0.1" placeholder="e.g. 60" required></label><label>Rainfall (mm)<input id="rainfall" type="number" min="0" max="500" step="0.1" placeholder="e.g. 2" required></label></div>
+      <button class="submit-button" type="submit" id="submitButton">Generate recommendation <span>→</span></button><p class="form-note">Enter measured values where possible. This prototype uses demonstration rules.</p>
+    </form>
+    <aside class="result-card" aria-live="polite"><p class="eyebrow">YOUR RESULT</p><div id="resultIcon" class="result-icon">◎</div><h3 id="resultTitle">Awaiting field data</h3><p id="resultText">Complete the form to receive a demonstration irrigation recommendation.</p><div class="result-details" id="resultDetails">Your result will appear here.</div></aside></div><p id="errorMessage" class="error-message" role="alert"></p>
+  </section>
+  <section class="workflow-section" id="workflow"><div class="section-heading"><p class="eyebrow">PROCESS</p><h2>How AgriPulse works</h2><p>A simple flow from field observations to a recommendation.</p></div><div class="steps"><article><span>01</span><h3>Input</h3><p>Enter crop and field conditions.</p></article><article><span>02</span><h3>Process</h3><p>The backend validates and processes the values.</p></article><article><span>03</span><h3>Recommend</h3><p>The demo rule returns an irrigation suggestion.</p></article><article><span>04</span><h3>Record</h3><p>The result is saved in the local SQLite database.</p></article></div></section>
+  <section class="section history-section" id="history"><div class="section-heading"><p class="eyebrow">RECENT RECORDS</p><h2>Prediction history</h2><p>Latest saved results from this application.</p></div><div class="table-wrap"><table><thead><tr><th>Crop</th><th>Moisture</th><th>Temperature</th><th>Rainfall</th><th>Result</th><th>Date</th></tr></thead><tbody id="historyBody"><tr><td colspan="6" class="empty">No records yet. Submit the form to add one.</td></tr></tbody></table></div></section>
+</main><footer><b>AgriPulse AI</b><span>Educational prototype · Irrigation decision support</span></footer><script src="/app.js"></script>
+</body></html>
